@@ -39,6 +39,7 @@ export const AuthForm = ({ type }: AuthFormProps) => {
       password: '',
     },
   });
+
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     setIsLoading(true);
     try {
@@ -105,7 +106,10 @@ export const AuthForm = ({ type }: AuthFormProps) => {
       </header>
       {user ? (
         <div className="flex flex-col gap-4">
-          <PlaidLink user={user} variant="primary" />
+          <PlaidLink
+            user={user}
+            variant="primary"
+          />
         </div>
       ) : (
         <>
