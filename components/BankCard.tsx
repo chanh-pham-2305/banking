@@ -7,10 +7,9 @@ export const BankCard = ({ account, userName, showBalance = true }: CreditCardPr
   return (
     <div className="flex flex-col">
       <Link
-        href={'/'}
+        href={`/transaction-history/?id=${account.appwriteItemId}`}
         className="bank-card"
       >
-        {/* `/transaction-history/?id=${account.appwriteItemId}` */}
         <div className="bank-card_content">
           <div>
             <h1 className="text-16 font-semibold text-white">{account?.name}</h1>

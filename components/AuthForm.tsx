@@ -20,7 +20,7 @@ import {
 } from '@/components/ui/form';
 
 import { Loader2 } from 'lucide-react';
-import { CustomInput, PlaidLink } from './index';
+import { CustomInput, PlaidLink, CustomPasswordInput } from './index';
 import { authFormSchema } from '@/lib/utils';
 import { Input } from '@/components/ui/input';
 import { useRouter } from 'next/navigation';
@@ -184,7 +184,7 @@ export const AuthForm = ({ type }: AuthFormProps) => {
                 placeholder="Enter your email"
               />
 
-              <CustomInput
+              <CustomPasswordInput
                 control={form.control}
                 name="password"
                 label="Password"
